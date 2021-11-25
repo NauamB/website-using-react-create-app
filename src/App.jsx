@@ -12,15 +12,16 @@ import { Container } from './styles/home'
 
 function App() {
   
-  const[user, setUser] = useState()
+  const [user, setUser] = useState()
+  const [userRepos, setUserRepos] = useState()
 
   
   
   return (
     
      <Container>
-      <SearchBar setUser={setUser} />
-      {user && <User user={user}/>}
+      <SearchBar setUser={setUser} setUserRepos={setUserRepos} />
+      {user && <User user={user} userRepos={userRepos}/>}
      <GlobalStyle/> 
     </Container>
     

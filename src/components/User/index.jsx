@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-export function User({user}) {
+export function User({user, userRepos}) {
     
     console.log(user)
     return (
@@ -16,7 +16,7 @@ export function User({user}) {
             <section>
                 
                 <div>
-                    <strong>12</strong>
+                    <strong>{userRepos?.length}</strong>
                     <span>repositorios</span>
                 </div>
                 
