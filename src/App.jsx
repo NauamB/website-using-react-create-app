@@ -1,4 +1,6 @@
-import {User} from './components/User'
+import { useState } from 'react'
+
+import { User } from './components/User'
 
 import { GlobalStyle } from './styles/global'
 
@@ -9,11 +11,16 @@ import { Container } from './styles/home'
 
 
 function App() {
+  
+  const[user, setUser] = useState()
+
+  
+  
   return (
     
      <Container>
-      <SearchBar />
-      <User/>
+      <SearchBar setUser={setUser} />
+      {user && <User user={user}/>}
      <GlobalStyle/> 
     </Container>
     
