@@ -8,6 +8,8 @@ import { SearchBar } from './components/SearchBar'
 
 import { Container } from './styles/home'
 
+import {RepostList} from './components/RepostList'
+
 
 
 function App() {
@@ -22,7 +24,11 @@ function App() {
      <Container>
       <SearchBar setUser={setUser} setUserRepos={setUserRepos} />
       {user && <User user={user} userRepos={userRepos}/>}
-     <GlobalStyle/> 
+      
+      <RepostList/>
+
+      <GlobalStyle />
+
     </Container>
     
   )
