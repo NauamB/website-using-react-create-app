@@ -1,3 +1,5 @@
+import {User} from './components/User'
+
 import { GlobalStyle } from './styles/global'
 
 import { SearchBar } from './components/SearchBar'
@@ -11,6 +13,7 @@ function App() {
     
      <Container>
       <SearchBar />
+      <User/>
      <GlobalStyle/> 
     </Container>
     
