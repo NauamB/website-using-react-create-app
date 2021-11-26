@@ -1,13 +1,13 @@
 import { Container} from './styles'
 import { FiArrowLeft } from 'react-icons/fi'
 
-export function RepostList({ user, userRepos }) {
+export function RepostList({ user, userRepos, setIsRepostListActive }) {
     
     
     return (
         <Container>
     <div>
-        <button type='button'><FiArrowLeft/>Voltar
+        <button type='button' onClick ={() => setIsRepostListActive(false)}><FiArrowLeft/>Voltar
         
         </button>
                 <h1>Repositorios de {user.name}</h1>

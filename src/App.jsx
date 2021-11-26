@@ -16,7 +16,7 @@ function App() {
   
   const [user, setUser] = useState()
   const [userRepos, setUserRepos] = useState()
-  const [isRepostListActive, setIsRepostListActive] = useState (false)
+  const [isRepostListActive, setIsRepostListActive] = useState(false)
 
   
   

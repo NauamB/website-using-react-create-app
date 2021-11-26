@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-export function User({user, userRepos}) {
+export function User({user, userRepos, setIsRepostListActive}) {
     
     console.log(user)
     return (
@@ -15,10 +15,10 @@ export function User({user, userRepos}) {
             
             <section>
                 
-                <div>
+                <button type='button' onClick ={() => setIsRepostListActive(true)}>
                     <strong>{userRepos?.length}</strong>
                     <span>repositorios</span>
-                </div>
+               </button>
                 
                 <div>
                     <strong>{user.followers}</strong>
