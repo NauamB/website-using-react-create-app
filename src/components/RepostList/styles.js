@@ -9,13 +9,18 @@ border-bottom: 10px solid var(--blue);
 div{
     display: flex;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
+
+    position: relative;
     padding: 1rem;
 
 
 
 
 button{
+
+    position: absolute;
+    left: 1rem;
     display: flex;
     align-items: center;
     color: var(--text-secondary);

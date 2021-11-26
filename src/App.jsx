@@ -16,6 +16,7 @@ function App() {
   
   const [user, setUser] = useState()
   const [userRepos, setUserRepos] = useState()
+  const [isRepostListActive, setIsRepostListActive] = useState (false)
 
   
   
@@ -23,9 +24,20 @@ function App() {
     
      <Container>
       <SearchBar setUser={setUser} setUserRepos={setUserRepos} />
-      {user && <User user={user} userRepos={userRepos}/>}
+
+      {isRepostListActive
+        ? userRepos && (
+          <RepostList user={user} userRepos={userRepos}
+            setIsRepostListActive={setIsRepostListActive}/>
+        )
+        : user && (
+          <User user={user} userRepos={userRepos}
+            setIsRepostListActive={setIsRepostListActive}/>
+      )}
+
+     
       
-      <RepostList/>
+      
 
       <GlobalStyle />
 
